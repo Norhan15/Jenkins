@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    def ip = env.ACTUAL_BRANCH == 'develop' ? DEV_IP :
+                    def ip = env.ACTUAL_BRANCH == 'dev' ? DEV_IP :
                              env.ACTUAL_BRANCH == 'qa'      ? QA_IP :
                              env.ACTUAL_BRANCH == 'main'    ? PROD_IP : null
 
