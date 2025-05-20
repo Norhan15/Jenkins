@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     def ip = env.ACTUAL_BRANCH == 'develop' ? DEV_IP :
-                             env.ACTUAL_BRANCH == 'QA'      ? QA_IP :
+                             env.ACTUAL_BRANCH == 'qa'      ? QA_IP :
                              env.ACTUAL_BRANCH == 'main'    ? PROD_IP : null
 
                     def pm2_name = "${env.ACTUAL_BRANCH}-health"
